@@ -30,7 +30,7 @@ function App() {
                 </AppBar>
                 <Grid item xs={12} sm={4}>
                   <AppBar
-                    className={clases.appBar}
+                    className={classes.appBar}
                     position="static"
                     color="inherit"
                   >

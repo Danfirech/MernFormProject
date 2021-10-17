@@ -5,12 +5,11 @@ import cors from "cors";
 const app = express();
 import studentRoutes from "./routes/student.js";
 
-app.use("/students", studentRoutes);
-
 app.use(bodyParser.json({ limit: "20mb", extended: true }));
 app.use(bodyParser.urlencoded({ limit: "20mb", extended: true }));
 
 app.use(cors());
+app.use("/students", studentRoutes);
 
 const CONNECTION_URL =
   "mongodb+srv://DanielPossehl:pass1@cluster0.4newk.mongodb.net/myFirstDatabase?retryWrites=true&w=majority";
